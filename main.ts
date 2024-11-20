@@ -43,5 +43,12 @@ newAr1.push(...newAr2)
 console.log(newAr3)
 
 
+// tuples 
+ // tuples can destructure easily 
+const tuple1 : [number , string ] = [1, "a"]
+let [x, y] = tuple1;
+
+console.log(x)
+console.log(y)
 
 // npm install -g typescript

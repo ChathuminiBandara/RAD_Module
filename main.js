@@ -31,10 +31,17 @@ function printArray(arr) {
     });
 }
 printArray(arr);
-// t mutable a obkect or an array
+// t mutable a object or an array
 var newAr1 = ["a", "b"];
 var newAr2 = ["c", "d", "e"];
-var newAr3 = __spreadArray(__spreadArray([], newAr1, true), newAr2, true);
-newAr1.push.apply(newAr1, newAr2);
+var newAr3 = __spreadArray(__spreadArray([], newAr1, true), newAr2, true); // appending arrays
+newAr1.push.apply(// appending arrays
+newAr1, newAr2);
 console.log(newAr3);
+// tuples 
+// tuples can destructure easily 
+var tuple1 = [1, "a"];
+var x = tuple1[0], y = tuple1[1];
+console.log(x);
+console.log(y);
 // npm install -g typescript
