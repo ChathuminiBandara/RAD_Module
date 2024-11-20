@@ -34,6 +34,8 @@ function printArray( arr : number[]){
 printArray(arr);
 
 
+// ------------------------------------------------------------------ //
+
 
 // t mutable a object or an array
 const newAr1 = ["a", "b"]
@@ -41,7 +43,11 @@ const newAr2 = ["c", "d", "e"]
 const newAr3 = [...newAr1, ...newAr2] // appending arrays
 newAr1.push(...newAr2)
 console.log(newAr3)
+console.log("---------------------------------------------------------");
 
+
+
+// ------------------------------------------------------------------ //
 
 // tuples 
  // tuples can destructure easily 
@@ -50,5 +56,35 @@ let [x, y] = tuple1;
 
 console.log(x)
 console.log(y)
+
+// ------------------------------------------------------------------ //
+
+// enums
+const small = 1;
+const medium = 2;
+const large = 3;
+//or
+enum SIZE {
+    small = "a",
+    medium = "b",
+    large = "c"
+}
+console.log("---------------------------------------------------------");
+
+console.log(SIZE.small);
+console.log(SIZE.medium);
+console.log(SIZE.large);
+// enums start default in 0, if specifyed it starts from the specified numbr
+
+
+
+
+
+// ------------------------------------------------------------------ //
+
+
+
+
+
 
 // npm install -g typescript

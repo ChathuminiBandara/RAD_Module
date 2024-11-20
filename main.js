@@ -31,6 +31,7 @@ function printArray(arr) {
     });
 }
 printArray(arr);
+// ------------------------------------------------------------------ //
 // t mutable a object or an array
 var newAr1 = ["a", "b"];
 var newAr2 = ["c", "d", "e"];
@@ -38,10 +39,30 @@ var newAr3 = __spreadArray(__spreadArray([], newAr1, true), newAr2, true); // ap
 newAr1.push.apply(// appending arrays
 newAr1, newAr2);
 console.log(newAr3);
+console.log("---------------------------------------------------------");
+// ------------------------------------------------------------------ //
 // tuples 
 // tuples can destructure easily 
 var tuple1 = [1, "a"];
 var x = tuple1[0], y = tuple1[1];
 console.log(x);
 console.log(y);
+// ------------------------------------------------------------------ //
+// enums
+var small = 1;
+var medium = 2;
+var large = 3;
+//or
+var SIZE;
+(function (SIZE) {
+    SIZE["small"] = "a";
+    SIZE["medium"] = "b";
+    SIZE["large"] = "c";
+})(SIZE || (SIZE = {}));
+console.log("---------------------------------------------------------");
+console.log(SIZE.small);
+console.log(SIZE.medium);
+console.log(SIZE.large);
+// enums start default in 0, if specifyed it starts from the specified numbr
+// ------------------------------------------------------------------ //
 // npm install -g typescript
