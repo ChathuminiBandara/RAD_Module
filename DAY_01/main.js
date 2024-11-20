@@ -59,10 +59,76 @@ var SIZE;
     SIZE["medium"] = "b";
     SIZE["large"] = "c";
 })(SIZE || (SIZE = {}));
+var mySize = SIZE.medium;
+console.log("My Size : ", mySize);
 console.log("---------------------------------------------------------");
 console.log(SIZE.small);
 console.log(SIZE.medium);
 console.log(SIZE.large);
 // enums start default in 0, if specifyed it starts from the specified numbr
 // ------------------------------------------------------------------ //
-// npm install -g typescript
+function add1(n1, n2) {
+    return n1 + n2;
+}
+// function add2(n1 : number, n2 : number) : void {
+//     return n1+n2;
+// }
+// function add3(n1 : number, n2 : number) : never {
+//     return ;
+// }
+// ----------function params passing and type secuaring -------------------------------------------------------- //
+function add(n1, n2) {
+    if (n2 === void 0) { n2 = 20; }
+    if (n1 < 100) {
+        return n1 + n2;
+    }
+    else {
+        return n1;
+    }
+}
+add(10, 40);
+// -------------addition function----------------------------------------------------- //
+function addNum(n1, n2) {
+    return n1 + n2;
+}
+function calculate(n1, n2, addNum) {
+    var result = addNum(n1, n2);
+    console.log(result);
+}
+calculate(10, 20, addNum);
+// -------------substraction function----------------------------------------------------- //
+function SubNum(n1, n2) {
+    return n1 - n2;
+}
+function substraction(n1, n2, addNum) {
+    var Subresult = SubNum(n1, n2);
+    console.log(Subresult);
+}
+calculate(10, 20, SubNum);
+// -------  assigning functions to a variable - by using arrow functions --------- methods calling by a arrow function ---------------------------------- //
+var person = {
+    firstName: "Ian",
+    age: 27
+};
+console.log(person.age);
+// --------- nested objects ---------------adding  references of a ong to anothr obj------------------------------------------ //
+var sports = {
+    firstName: "Ian",
+    age: 27,
+    hobbies: {
+        favSport: "Swimming"
+    }
+};
+// --  accsessing the properties in a nested object
+console.log(sports.hobbies.favSport);
+// --- object destructuring ------------------------------------------------ //
+var newMan = {
+    newManfirstName: "new name ",
+    NewManage: 30
+};
+var newManfirstName = newMan.newManfirstName, NewManage = newMan.NewManage;
+var hobbies = sports.hobbies;
+console.log(newManfirstName);
+console.log(NewManage);
+console.log(hobbies);
+// ------------------------------------------------------------------ //
